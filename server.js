@@ -15,7 +15,7 @@ dotenv.config();
 const app = express();
 app.use(
   cors({
-    origin: "http://localhost:8080",
+    origin: "https://jeu-uno.vercel.app",
     methods: ["GET", "POST"],
     credentials: true,
   })
@@ -42,7 +42,7 @@ app.use("/api/login", loginRoutes);
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: "http://localhost:8080",
+    origin: "https://jeu-uno.vercel.app",
     methods: ["GET", "POST"],
     credentials: true,
   },
